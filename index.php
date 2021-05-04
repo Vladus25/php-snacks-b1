@@ -10,12 +10,15 @@
         background-color: purple;
         color: white;
       }
+      li{
+        font-size: 30px;
+      }
     </style>
   </head>
   <body>
     <h1>PHP</h1>
 
-    <h1>
+    <ol>
       <?php
       $matchesAll = [
         'matches' => [
@@ -59,15 +62,15 @@
         $pointsGuest = $matchesAll[matches][$i][pointsGuest];
 
         if ($pointsHome > $pointsGuest ) {
-          echo '<div>' . $data . ' | ' . $home . ' - ' . $guest . ' | ' . $pointsHome . ' - '. $pointsGuest . ' | ' . 'Winer: ' . $home . '</div>';
+          echo '<li>' . $data . ' | ' . $home . ' - ' . $guest . ' | ' . $pointsHome . ' - '. $pointsGuest . ' | ' . 'Winer: ' . $home . '</li>';
         }
         else{
-          echo '<div>' . $data . ' | ' . $home . ' - ' . $guest . ' | ' . $pointsHome . ' - '. $pointsGuest . ' | ' . 'Winer: ' . $guest . '</div>';
+          echo '<li>' . $data . ' | ' . $home . ' - ' . $guest . ' | ' . $pointsHome . ' - '. $pointsGuest . ' | ' . 'Winer: ' . $guest . '</li>';
         }
       }
 
       ?>
-    </h1>
+    </ol>
 
   </body>
 </html>
